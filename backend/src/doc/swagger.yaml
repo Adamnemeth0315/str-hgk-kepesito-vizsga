@@ -186,7 +186,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /student/{id}:
+  /school/{id}:
     get:
       description: Get a School
       parameters:

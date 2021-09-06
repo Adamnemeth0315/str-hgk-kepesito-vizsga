@@ -11,10 +11,10 @@
         required: true
     },
     zipcode: Number,
-    classrooms: {
+    classroom: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Classroom'
-    }
+    }]
  })
 
  module.exports = mongoose.model('School', schoolSchema);
