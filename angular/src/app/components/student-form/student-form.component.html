@@ -1,7 +1,7 @@
 <div class="container edit-container py-4">
     <div class="row">
         <div *ngIf="student" class="col-10 mx-auto col-md-6 offset-md-3 mt-5">
-            <form #studentForm="ngForm" (ngSubmit)="setStudentToDatabase(student)">
+            <form #studentForm="ngForm" (ngSubmit)="saveStudent(student, id)">
                 <div class="form-group">
                     <label for="firstName">FirstName:</label>
                     <input name="firstName" [(ngModel)]="student.firstName" type="text" class="form-control" id="firstName" required
