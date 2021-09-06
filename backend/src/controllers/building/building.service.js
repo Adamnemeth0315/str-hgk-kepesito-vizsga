@@ -6,7 +6,9 @@
  *
  * A @getAll metódus adja vissza a populált teljes "building" listát
  */
+ const Model = require('../../models/building.model');
+exports.update = (buildingId, className) => {
+    Model.findByIdAndUpdate(id, updateData, { new: true })
+};
 
-exports.update = (buildingId, className) => {};
-
-exports.getAll = () => {}
+exports.getAll = () => Model.find().populate('classrooms');

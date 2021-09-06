@@ -11,8 +11,18 @@
 
 const httpError = require('http-errors');
 
+const Model = require('../../models/building.model');
+const service = require('./building.service');
 
 exports.updateBuilding = (req, res, next) => {}
 
 
-exports.getAllBuildingWithClassrooms = () => {};
+exports.getAllBuildingWithClassrooms = () => {
+    return service.findAll()
+         .then(list => {
+             res.json(list);
+         }).catch(err => {
+             console.error(err);
+             return new httpError.InternalServerError('List could not send')
+         })
+};
