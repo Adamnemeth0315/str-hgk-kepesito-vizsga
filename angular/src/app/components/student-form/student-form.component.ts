@@ -36,7 +36,7 @@ export class StudentFormComponent implements OnInit {
   }
 
   saveStudent(student: Student, id: string){
-    this.studentService.update(student, id).subscribe(
+    this.studentService.update(student, this.studentId).subscribe(
         ev => this.router.navigate(['student-list'])
       );
   }
