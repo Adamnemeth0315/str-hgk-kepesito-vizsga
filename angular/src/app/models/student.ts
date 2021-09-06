@@ -1,6 +1,6 @@
 import { Classroom } from "./classroom";
 
-export interface Student {
+export class Student {
   _id?:string;
   firstName: string;
   lastName: string;
