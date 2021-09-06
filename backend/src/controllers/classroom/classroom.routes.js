@@ -3,9 +3,8 @@
  */
   
  const express = require('express');
- const controller = require('./customers.controller');
- 
  const router = express.Router();
+ const controller = require('./classroom.controller');
  
  router.post('/', (req, res, next) => {
      return controller.create(req, res, next);
@@ -19,7 +18,7 @@
      return controller.findOne(req, res, next);
  });
  
- router.patch('/:id', (req, res, next) => {
+ router.put('/:id', (req, res, next) => {
      return controller.update(req, res, next);
  });
  
