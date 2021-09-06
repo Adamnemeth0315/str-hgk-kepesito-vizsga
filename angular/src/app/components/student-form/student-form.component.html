@@ -1,1 +1,27 @@
-<p>student-form works!</p>
+<div class="container edit-container py-4">
+    <div class="row">
+        <div *ngIf="student" class="col-10 mx-auto col-md-6 offset-md-3 mt-5">
+            <form #studentForm="ngForm" (ngSubmit)="setStudentToDatabase(student)">
+                <div class="form-group">
+                    <label for="firstName">FirstName:</label>
+                    <input name="firstName" [(ngModel)]="student.firstName" type="text" class="form-control" id="firstName" required
+                        autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">LastName:</label>
+                    <input name="lastName" [(ngModel)]="student.lastName" type="text" class="form-control" id="lastName" required
+                        autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input name="email" id="email" [(ngModel)]="movie.email" type="number" class="form-control" pattern="[0-9]{4}" required>
+                </div>
+                <div class="d-grid col-8 mx-auto">
+                    <button [disabled]="studentForm.invalid " type="submit" class="btn btn-primary btn-block">
+                       <p> Save changes </p>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
