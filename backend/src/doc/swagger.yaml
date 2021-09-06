@@ -191,7 +191,7 @@ paths:
       description: Get a School
       parameters:
         - in: path
-          name: _id
+          name: id
           required: true
           schema:
             type: string
@@ -219,7 +219,7 @@ paths:
       description: Updates a School
       parameters:
         - in: path
-          name: _id
+          name: id
           required: true
           schema:
             type: string
@@ -252,7 +252,7 @@ paths:
       description: Removes a School
       parameters:
         - in: path
-          name: _id
+          name: id
           required: true
           schema:
             type: string
